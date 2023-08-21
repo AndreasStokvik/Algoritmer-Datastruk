@@ -1,5 +1,5 @@
 ﻿  Factorials.cpp
-C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Factorials\Factorials\Factorials.cpp(32,17): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Factorials\Factorials\Factorials.cpp(36): warning C4715: 'recur': not all control paths return a value
-C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Factorials\Factorials\Factorials.cpp(26): warning C4717: 'main': recursive on all control paths, function will cause runtime stack overflow
+C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Factorials\Factorials\Factorials.cpp(33,17): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Factorials\Factorials\Factorials.cpp(27): warning C4717: 'main': recursive on all control paths, function will cause runtime stack overflow
+C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Factorials\Factorials\Factorials.cpp(37): warning C4715: 'recur': not all control paths return a value
   Factorials.vcxproj -> C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Factorials\x64\Debug\Factorials.exe

@@ -8,14 +8,20 @@ double result;
 
 int main()
 {
-    double n = 0;
+    double input = 0;
 
-    std::cin >> n;
-	n = (double)n;
+    std::cin >> input;
+	input = (double)input;
 
-	result = n;
-
-	recur(n);
+	result = input;
+	if (!std::cin)
+	{
+		std::cout << "not a number" << std::endl;
+	}
+	else
+	{
+		recur(input);
+	}
 	std::cout << result << std::endl;
 	return main();
 }

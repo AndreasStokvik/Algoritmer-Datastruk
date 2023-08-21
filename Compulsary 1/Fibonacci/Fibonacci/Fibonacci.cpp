@@ -1,41 +1,35 @@
 #include <iostream>
 
-int recur(double n);
+double recur(double n);
 
-double result;
+double result = 1;
+double lastResult = 0;
+double nextResult;
 
 int main()
 {
-	double n = 0;
-	/*double result = 1;
-	double s1 = 0;
-	double s2 = 1;*/
 
-	std::cin >> n;
-	n = (double)n;
-	recur(n);
-
-	/*while (n > 1)
+	double input = 0;
+	std::cin >> input;
+	if (!std::cin)
 	{
-		std::cout << result << std::endl;
-		s2 = s1;
-		s1 = result;
-		result = s1+s2;
-		n--;
-	}*/
-	//std::cout << result << std::endl;
-	return main();
+		std::cout << "no work" << std::endl;
+	} else
+	{
+		recur(input);
+	}
 }
 
-int recur(double n)
+double recur(double n)
 {
-	if  (n>0)
+	nextResult = result + lastResult;
+	std::cout << nextResult << std::endl;
+	lastResult = result;
+	result = nextResult;
+
+	if (n > 1)
 	{
-		result += recur(n - 1);
-		std::cout << result << std::endl;
+		recur(n - 1);
 	}
-	else
-	{
-		return 1;
-	}
+	return result;
 }
