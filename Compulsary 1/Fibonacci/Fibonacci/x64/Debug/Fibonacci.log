@@ -1,0 +1,3 @@
+﻿  Fibonacci.cpp
+C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Fibonacci\Fibonacci\Fibonacci.cpp(22): warning C4717: 'main': recursive on all control paths, function will cause runtime stack overflow
+  Fibonacci.vcxproj -> C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Fibonacci\x64\Debug\Fibonacci.exe

@@ -1,0 +1,3 @@
+﻿  Factorials.cpp
+C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Factorials\Factorials\Factorials.cpp(20): warning C4717: 'main': recursive on all control paths, function will cause runtime stack overflow
+  Factorials.vcxproj -> C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsary 1\Factorials\x64\Debug\Factorials.exe
