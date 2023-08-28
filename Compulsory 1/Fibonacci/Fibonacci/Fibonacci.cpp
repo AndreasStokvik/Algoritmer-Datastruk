@@ -16,6 +16,7 @@ int main()
 		std::cout << "no work" << std::endl;
 	} else
 	{
+		std::cout << "1" << std::endl;
 		recur(input);
 	}
 }
@@ -27,7 +28,7 @@ double recur(double n)
 	lastResult = result;
 	result = nextResult;
 
-	if (n > 1)
+	if (n > 2)
 	{
 		recur(n - 1);
 	}
