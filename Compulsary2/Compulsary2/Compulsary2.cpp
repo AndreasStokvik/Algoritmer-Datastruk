@@ -22,70 +22,68 @@ list<int> GenerateList(list<int>& MainList, int SizeToGen) {
     return(MainList);
 }
 
-void QuickSort(list<int>& MainList) {
-    list<int> Equal;
-    list<int> Lesser;
-    list<int> Greater;
+void QuickSort(list<int>& MainList)
+{
+    if (MainList.size() > 2) {
+        list<int> Lesser, Equal, Greater;
 
-    if (MainList.size() <= 1) {
-        return;
-    }
-    else {
-        auto Current = MainList.begin();
-        auto Pivot = MainList.front();
-
-        while (Current != MainList.end()) {
-            if (*Current < Pivot) {
-                Lesser.push_back(*Current);
+        auto pivot = MainList.front();
+        auto compare = MainList.begin();
+        
+        while (compare != MainList.end()) {
+            if (*compare < pivot) {
+                Lesser.push_back(*compare);
             }
-            else if (*Current > Pivot) {
-                Greater.push_back(*Current);
+            else if (*compare == pivot) {
+                Equal.push_back(*compare);
             }
             else {
-                Equal.push_back(*Current);
+                Greater.push_back(*compare);
             }
-            ++Current;
+            ++compare;
         }
+        MainList.clear();
+        QuickSort(Lesser);
+        MainList.splice(MainList.end(), Lesser);
+        MainList.splice(MainList.end(), Equal);
+        QuickSort(Greater);
+        MainList.splice(MainList.end(), Greater);
     }
-    QuickSort(Lesser);
-    QuickSort(Greater);
-    MainList.clear();
-    MainList.splice(MainList.end(), Lesser);
-    MainList.splice(MainList.end(), Equal);
-    MainList.splice(MainList.end(), Greater);
+    else return;
 }
 
-void merge(list<int>& lst, list<int>& left, list<int>& right) {
+void Merge(list<int>& MainList, list<int>& left, list<int>& right)
+{
     auto leftIt = left.begin();
     auto rightIt = right.begin();
 
     while (leftIt != left.end() && rightIt != right.end()) {
         if (*leftIt <= *rightIt) {
-            lst.push_back(*leftIt);
+            MainList.push_back(*leftIt);
             leftIt++;
         }
         else {
-            lst.push_back(*rightIt);
+            MainList.push_back(*rightIt);
             rightIt++;
         }
     }
     while (leftIt != left.end()) {
-        lst.push_back(*leftIt);
+        MainList.push_back(*leftIt);
         leftIt++;
     }
 
     while (rightIt != right.end()) {
-        lst.push_back(*rightIt);
+        MainList.push_back(*rightIt);
         rightIt++;
     }
 }
 
-void MergeSort(list<int>& MainList) {
+void MergeSort(list<int>& MainList)
+{
     if (MainList.size() <= 1) {
         return;
     }
 
-    // Split the list into two halves
     list<int> left;
     list<int> right;
     int mid = MainList.size() / 2;
@@ -105,18 +103,19 @@ void MergeSort(list<int>& MainList) {
     MergeSort(right);
 
     MainList.clear();
-    merge(MainList, left, right);
+    Merge(MainList, left, right);
 }
 
-void BubbleSort(std::list<int>& MainList) {
+void BubbleSort(list<int>& MainList)
+{
     bool swapped;
     do {
         swapped = false;
         auto Current = MainList.begin();
-        auto Next = std::next(Current);
+        auto Next = next(Current);
         while (Next != MainList.end()) {
             if (*Current > *Next) {
-                std::iter_swap(Current, Next);
+                iter_swap(Current, Next);
                 swapped = true;
             }
             ++Current;
@@ -133,6 +132,11 @@ int main()
 
     list<int> MainList;
     GenerateList(MainList, SizeToGen);
+
+    // Declare these in case user selects quicksort
+    auto MainListLow = MainList.begin();
+    advance(MainListLow, distance(MainList.begin(), MainList.end()) / 2); // Find the middle element as the pivot
+    auto MainListHigh = prev(MainList.end());
 
     //PrintList(MainList);
 
