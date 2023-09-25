@@ -1,0 +1,3 @@
+﻿  Compulsary2.cpp
+C:\Users\andre\Documents\GitHub\prog 3\compulsary 2\Compulsary2\Compulsary2\Compulsary2.cpp(92,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Compulsary2.vcxproj -> C:\Users\andre\Documents\GitHub\prog 3\compulsary 2\Compulsary2\x64\Debug\Compulsary2.exe
