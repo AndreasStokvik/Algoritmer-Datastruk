@@ -13,39 +13,38 @@ void PrintList(list<int> const list) {
     cout << endl;
 }
 
-list<int> GenerateList(list<int>& MainList,int SizeToGen) {
+list<int> GenerateList(list<int>& MainList, int SizeToGen) {
     for (int i = 0; i < SizeToGen; i++) {
-        int RandomValue = 1+ (rand() % (SizeToGen*5));  //needs to be changed so it can generate numbers above 2^15, so that larger lists arent full of
+        int RandomValue = 1 + (rand() % (SizeToGen * 5));  //needs to be changed so it can generate numbers above 2^15, so that larger lists arent full of
         MainList.push_back(RandomValue);
-       }
+    }
 
     return(MainList);
 }
 
 void QuickSort(list<int>& MainList) {
-    list<int> Lesser;
     list<int> Equal;
+    list<int> Lesser;
     list<int> Greater;
 
-    if(MainList.size() <= 1) {
+    if (MainList.size() <= 1) {
         return;
     }
     else {
         auto Current = MainList.begin();
         auto Pivot = MainList.front();
 
-
         while (Current != MainList.end()) {
-            if (*Current < Pivot) { 
+            if (*Current < Pivot) {
                 Lesser.push_back(*Current);
             }
-            else if (*Current > Pivot) { 
-                Greater.push_back(*Current); 
+            else if (*Current > Pivot) {
+                Greater.push_back(*Current);
             }
             else {
                 Equal.push_back(*Current);
             }
-        ++Current;
+            ++Current;
         }
     }
     QuickSort(Lesser);
@@ -102,11 +101,9 @@ void MergeSort(list<int>& MainList) {
         it++;
     }
 
-    // Recursively sort the two halves
     MergeSort(left);
     MergeSort(right);
 
-    // Merge the sorted halves back into the original list
     MainList.clear();
     merge(MainList, left, right);
 }
@@ -136,7 +133,7 @@ int main()
 
     list<int> MainList;
     GenerateList(MainList, SizeToGen);
-    
+
     //PrintList(MainList);
 
     cout << "Select Algorithm" << endl;
@@ -159,6 +156,7 @@ int main()
     case 3:
         cout << "Bubble sort selected" << endl;
         BubbleSort(MainList);
+        break;
     default:
         cout << "Invalid input" << endl;
         break;
