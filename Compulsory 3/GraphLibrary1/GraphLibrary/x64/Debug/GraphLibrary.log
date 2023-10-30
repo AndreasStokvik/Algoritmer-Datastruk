@@ -1,5 +1,0 @@
-﻿  GraphLibrary.cpp
-C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsory 3\GraphLibrary\GraphLibrary\GraphLibrary.cpp(12,15): error C2512: 'GraphNode': no appropriate default constructor available
-C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsory 3\GraphLibrary\GraphLibrary\GraphNode.h(8,7): message : see declaration of 'GraphNode'
-  GraphNode.cpp
-  Generating Code...
