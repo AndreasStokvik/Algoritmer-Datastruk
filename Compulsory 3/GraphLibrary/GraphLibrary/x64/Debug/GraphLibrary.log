@@ -1,0 +1,4 @@
+﻿  GraphLibrary.cpp
+C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsory 3\GraphLibrary\GraphLibrary\GraphLibrary.cpp(189,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsory 3\GraphLibrary\GraphLibrary\GraphLibrary.cpp(211,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GraphLibrary.vcxproj -> C:\Users\andre\Documents\GitHub\programming 2\Algoritmer-Datastruk\Compulsory 3\GraphLibrary\x64\Debug\GraphLibrary.exe

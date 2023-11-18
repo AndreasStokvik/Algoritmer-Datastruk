@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d4f4b621-51e4-4aa4-83ac-11acc9fd4769}</ProjectGuid>
+    <ProjectGuid>{04f86244-733a-4da6-b9a8-5152025e19a0}</ProjectGuid>
     <RootNamespace>GraphLibrary</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -127,13 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="GraphLibrary.cpp" />
-    <ClCompile Include="GraphNode.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Graph.h" />
-    <ClInclude Include="GraphNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
